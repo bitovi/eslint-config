@@ -1,0 +1,26 @@
+{
+  "name": "@bitovi/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitovi/eslint-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitovi/eslint-config/issues"
+  },
+  "homepage": "https://github.com/bitovi/eslint-config#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  }
+}
