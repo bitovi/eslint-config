@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     "./rules/base",
     "./rules/typescript",
+    "./rules/rxjs",
     "./rules/jest",
     "./rules/karma",
     "./rules/ngrx",
