@@ -4,6 +4,15 @@ const rxjs = tryRequire("rxjs");
 module.exports = !rxjs
   ? {}
   : {
-      plugins: ["rxjs"],
-      extends: ["plugin:rxjs/recommended"],
+      overrides: [
+        {
+          files: ["*.ts"],
+          plugins: ["rxjs"],
+          extends: ["plugin:rxjs/recommended"],
+          parserOptions: {
+            project: ["tsconfig.json"],
+            createDefaultProgram: true,
+          },
+        },
+      ],
     };

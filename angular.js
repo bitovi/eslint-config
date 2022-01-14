@@ -3,10 +3,12 @@ module.exports = {
     "./rules/base",
     "./rules/typescript",
     "./rules/rxjs",
+    "./rules/angular-a11y",
     "./rules/jest",
     "./rules/karma",
     "./rules/ngrx",
   ].map(require.resolve),
+  // angular defaults
   overrides: [
     {
       files: ["*.ts"],
