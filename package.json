@@ -1,15 +1,16 @@
 {
   "name": "@bitovi/eslint-config",
   "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Bitovi's recommended set of ESLint rules",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitovi/eslint-config.git"
   },
-  "author": "",
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "web": "https://www.bitovi.com/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bitovi/eslint-config/issues"
