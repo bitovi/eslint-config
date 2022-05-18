@@ -1,6 +1,6 @@
 {
   "name": "@bitovi/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bitovi's recommended set of ESLint rules",
   "repository": {
     "type": "git",
@@ -22,7 +22,10 @@
     "@angular-eslint/template-parser": "^13.0.1",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
-    "eslint-plugin-rxjs": "^5.0.1"
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-ngrx": "^2.1.2",
+    "eslint-plugin-rxjs": "^5.0.1",
+    "eslint-plugin-testing-library": "^5.5.0"
   },
   "peerDependencies": {
     "@angular/core": ">= 13",
