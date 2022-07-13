@@ -11,6 +11,7 @@ module.exports = {
         "@angular-eslint/template/no-positive-tabindex": "warn",
         "@angular-eslint/template/accessibility-label-for": "warn",
         "@angular-eslint/template/click-events-have-key-events": "warn",
+        "@angular-eslint/template/mouse-events-have-key-events": "warn",
       },
     },
   ],
