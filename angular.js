@@ -8,7 +8,6 @@ module.exports = {
     "./rules/karma",
     "./rules/ngrx",
   ].map(require.resolve),
-  plugins: ["@typescript-eslint"],
   rules: {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
