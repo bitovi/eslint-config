@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   parser: "@typescript-eslint/parser",
   settings: {
     react: {
@@ -7,16 +6,21 @@ module.exports = {
     },
   },
 
-  extends: [
-    "./rules/base",
-    "./rules/typescript",
-    "./rules/jest",
-    "./rules/jsx",
-  ].map(require.resolve),
-
   plugins: ["react", "react-hooks"],
-  extends: ["plugin:react/recommended", "plugin:react-hooks/recommended"],
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+
+    ...[
+      "./rules/base",
+      "./rules/typescript",
+      "./rules/jest",
+      "./rules/jsx",
+    ].map(require.resolve),
+  ],
+
   rules: {
+    "react/display-name": "off",
     "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "error",
     "react-hooks/rules-of-hooks": "error",
@@ -38,9 +42,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: "**/*.+(ts|tsx)",
+      files: ["**/*.stories.*", "**/*.test.*"],
       rules: {
-        "react/display-name": "off",
+        "import/no-anonymous-default-export": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
       },
     },
   ],
