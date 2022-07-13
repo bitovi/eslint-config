@@ -19,26 +19,29 @@ In your Project's ESLint config file, extend any of the available rules.
 
 ## Available Rules
 
-| Rule         | angular            | react |
-| ------------ | ------------------ | ----- |
-| angular-a11y | :white_check_mark: |       |
-| base         | :white_check_mark: |       |
-| jest         | :white_check_mark: |       |
-| karma        | :white_check_mark: |       |
-| ngrx         | :white_check_mark: |       |
-| rxjs         | :white_check_mark: |       |
-| typescript   | :white_check_mark: |       |
+| Rule         | angular            | react              |
+| ------------ | ------------------ | ------------------ |
+| angular-a11y | :white_check_mark: |                    |
+| base         | :white_check_mark: | :white_check_mark: |
+| jest         | :white_check_mark: |                    |
+| jsx          |                    | :white_check_mark: |
+| karma        | :white_check_mark: |                    |
+| ngrx         | :white_check_mark: |                    |
+| rxjs         | :white_check_mark: |                    |
+| typescript   | :white_check_mark: | :white_check_mark: |
 
 ### angular-a11y
 
 | Rule                                                    | Error Level |
 | ------------------------------------------------------- | ----------- |
-| @angular-eslint/template/accessibility-elements-content | warn        |
 | @angular-eslint/template/accessibility-alt-text         | error       |
-| @angular-eslint/template/accessibility-valid-aria       | error       |
-| @angular-eslint/template/no-positive-tabindex           | warn        |
+| @angular-eslint/template/accessibility-elements-content | warn        |
 | @angular-eslint/template/accessibility-label-for        | warn        |
+| @angular-eslint/template/accessibility-table-scope      | error       |
+| @angular-eslint/template/accessibility-valid-aria       | error       |
 | @angular-eslint/template/click-events-have-key-events   | warn        |
+| @angular-eslint/template/mouse-events-have-key-events   | warn        |
+| @angular-eslint/template/no-positive-tabindex           | warn        |
 
 ### base
 
@@ -68,13 +71,3 @@ rxjs includes `rxjs/recommended`.
 ### typescript
 
 typescript includes `@typescript-eslint/eslint-recommended` and `@typescript-eslint/recommended`.
-
-| Rule                                              | Error Level                               |
-| ------------------------------------------------- | ----------------------------------------- |
-| @typescript-eslint/explicit-function-return-type  | off                                       |
-| @typescript-eslint/no-inferrable-types            | off                                       |
-| @typescript-eslint/no-use-before-define           | off                                       |
-| @typescript-eslint/ban-ts-comment                 | off                                       |
-| @typescript-eslint/explicit-module-boundary-types | error                                     |
-| no-unused-vars                                    | off                                       |
-| @typescript-eslint/no-unused-vars                 | error, ignoreRestSiblings true, args none |
