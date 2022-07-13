@@ -43,8 +43,7 @@ jobs:
       - name: Publish to NPM Registry
         uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ github.event.inputs.segment }}
-          registry: "https://registry.npmjs.org/"
+          token: ${{ github.event.inputs.token }}
 
       - name: Push Tag
         uses: ad-m/github-push-action@master
