@@ -23,7 +23,7 @@ In your Project's ESLint config file, extend any of the available rules.
 | ------------ | ------------------ | ------------------ |
 | angular-a11y | :white_check_mark: |                    |
 | base         | :white_check_mark: | :white_check_mark: |
-| jest         | :white_check_mark: |                    |
+| jest         | :white_check_mark: | :white_check_mark: |
 | jsx          |                    | :white_check_mark: |
 | karma        | :white_check_mark: |                    |
 | ngrx         | :white_check_mark: |                    |
@@ -32,16 +32,18 @@ In your Project's ESLint config file, extend any of the available rules.
 
 ### angular-a11y
 
-| Rule                                                    | Error Level |
-| ------------------------------------------------------- | ----------- |
-| @angular-eslint/template/accessibility-alt-text         | error       |
-| @angular-eslint/template/accessibility-elements-content | warn        |
-| @angular-eslint/template/accessibility-label-for        | warn        |
-| @angular-eslint/template/accessibility-table-scope      | error       |
-| @angular-eslint/template/accessibility-valid-aria       | error       |
-| @angular-eslint/template/click-events-have-key-events   | warn        |
-| @angular-eslint/template/mouse-events-have-key-events   | warn        |
-| @angular-eslint/template/no-positive-tabindex           | warn        |
+| Rule                                                                | Error Level |
+| ------------------------------------------------------------------- | ----------- |
+| @angular-eslint/template/accessibility-alt-text                     | error       |
+| @angular-eslint/template/accessibility-elements-content             | error       |
+| @angular-eslint/template/accessibility-label-has-associated-control | error       |
+| @angular-eslint/template/accessibility-table-scope                  | error       |
+| @angular-eslint/template/accessibility-valid-aria                   | error       |
+| @angular-eslint/template/click-events-have-key-events               | warn        |
+| @angular-eslint/template/mouse-events-have-key-events               | warn        |
+| @angular-eslint/template/no-autofocus                               | warn        |
+| @angular-eslint/template/no-distracting-elements                    | error       |
+| @angular-eslint/template/no-positive-tabindex                       | error       |
 
 ### base
 
