@@ -6,9 +6,6 @@ on:
       segment:
         description: "The version segment to increment: major, minor, or patch."
         required: true
-      token:
-        description: "Your NPM token."
-        required: true
 
 jobs:
   build:
@@ -43,7 +40,7 @@ jobs:
       - name: Publish to NPM Registry
         uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ github.event.inputs.token }}
+          token: ${{ secrets.NPM_TOKEN }}
 
       - name: Push Tag
         uses: ad-m/github-push-action@master
