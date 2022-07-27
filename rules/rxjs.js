@@ -9,9 +9,11 @@ module.exports = !rxjs
           files: ["*.ts"],
           plugins: ["rxjs"],
           extends: ["plugin:rxjs/recommended"],
+          parser: "@typescript-eslint/parser",
           parserOptions: {
-            project: ["tsconfig.json"],
-            createDefaultProgram: true,
+            ecmaVersion: 2019,
+            project: ["./tsconfig.*?.json"],
+            sourceType: "module",
           },
         },
       ],
