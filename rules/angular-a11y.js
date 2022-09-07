@@ -3,7 +3,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.html"],
-      plugins: ["@angular-eslint/template", "@bitovi"],
+      plugins: ["@angular-eslint/template"],
       rules: {
         "@angular-eslint/template/accessibility-alt-text": "error",
         "@angular-eslint/template/accessibility-elements-content": "error",
@@ -16,6 +16,12 @@ module.exports = {
         "@angular-eslint/template/no-autofocus": "warn",
         "@angular-eslint/template/no-distracting-elements": "error",
         "@angular-eslint/template/no-positive-tabindex": "error",
+      },
+    },
+    {
+      files: ["*.ts"],
+      plugins: ["@bitovi"],
+      rules: {
         "@bitovi/host-listener-click-events-have-key-events": "warn",
         "@bitovi/host-listener-mouse-events-have-key-events": "warn",
       },
