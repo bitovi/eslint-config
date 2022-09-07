@@ -19,16 +19,17 @@ In your Project's ESLint config file, extend any of the available rules.
 
 ## Available Rules
 
-| Rule         | angular            | react              |
-| ------------ | ------------------ | ------------------ |
-| angular-a11y | :white_check_mark: |                    |
-| base         | :white_check_mark: | :white_check_mark: |
-| jest         | :white_check_mark: | :white_check_mark: |
-| jsx          |                    | :white_check_mark: |
-| karma        | :white_check_mark: |                    |
-| ngrx         | :white_check_mark: |                    |
-| rxjs         | :white_check_mark: |                    |
-| typescript   | :white_check_mark: | :white_check_mark: |
+| Rule                   | angular            | react              |
+| ---------------------- | ------------------ | ------------------ |
+| angular-a11y           | :white_check_mark: |                    |
+| angular-best-practices | :white_check_mark: |                    |
+| base                   | :white_check_mark: | :white_check_mark: |
+| jest                   | :white_check_mark: | :white_check_mark: |
+| jsx                    |                    | :white_check_mark: |
+| karma                  | :white_check_mark: |                    |
+| ngrx                   | :white_check_mark: |                    |
+| rxjs                   | :white_check_mark: |                    |
+| typescript             | :white_check_mark: | :white_check_mark: |
 
 ### angular-a11y
 
@@ -46,6 +47,21 @@ In your Project's ESLint config file, extend any of the available rules.
 | @angular-eslint/template/no-positive-tabindex                       | error       |
 | @bitovi/host-listener-click-events-have-key-events                  | warn        |
 | @bitovi/host-listener-mouse-events-have-key-events                  | warn        |
+
+### angular-best-practices
+
+| Rule                                             | Error Level |
+| ------------------------------------------------ | ----------- |
+| @angular-eslint/template/banana-in-box           | error       |
+| @angular-eslint/template/button-has-type         | warn        |
+| @angular-eslint/template/conditional-complexity  | warn        |
+| @angular-eslint/template/cyclomatic-complexity   | warn        |
+| @angular-eslint/template/eqeqeq                  | error       |
+| @angular-eslint/template/no-any                  | error       |
+| @angular-eslint/template/no-call-expression      | error       |
+| @angular-eslint/template/no-duplicate-attributes | error       |
+| @angular-eslint/template/no-negated-async        | warn        |
+| @angular-eslint/template/use-track-by-function   | warn        |
 
 ### base
 
@@ -66,7 +82,8 @@ to-do
 
 ### ngrx
 
-ngrx rule includes `ngrx/recommended`.
+ngrx rule includes `ngrx/recommended` if @ngrx/store or @ngrx/component-store version is less than 14.
+Otherwise, ngrx rule includes `@ngrx/recommended`.
 
 ### rxjs
 

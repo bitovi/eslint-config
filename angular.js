@@ -4,6 +4,7 @@ module.exports = {
     "./rules/typescript",
     "./rules/rxjs",
     "./rules/angular-a11y",
+    "./rules/angular-best-practices",
     "./rules/jest",
     "./rules/karma",
     "./rules/ngrx",
