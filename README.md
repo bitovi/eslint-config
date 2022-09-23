@@ -45,8 +45,8 @@ In your Project's ESLint config file, extend any of the available rules.
 | @angular-eslint/template/no-autofocus                               | warn        |
 | @angular-eslint/template/no-distracting-elements                    | error       |
 | @angular-eslint/template/no-positive-tabindex                       | error       |
-| @bitovi/host-listener-click-events-have-key-events                  | warn        |
-| @bitovi/host-listener-mouse-events-have-key-events                  | warn        |
+| @bitovi/angular/host-listener-click-events-have-key-events          | warn        |
+| @bitovi/angular/host-listener-mouse-events-have-key-events          | warn        |
 
 ### angular-best-practices
 
