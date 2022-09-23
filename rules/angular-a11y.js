@@ -22,8 +22,8 @@ module.exports = {
       files: ["*.ts"],
       plugins: ["@bitovi"],
       rules: {
-        "@bitovi/host-listener-click-events-have-key-events": "warn",
-        "@bitovi/host-listener-mouse-events-have-key-events": "warn",
+        "@bitovi/angular/host-listener-click-events-have-key-events": "warn",
+        "@bitovi/angular/host-listener-mouse-events-have-key-events": "warn",
       },
     },
   ],
