@@ -3,10 +3,10 @@ module.exports = {
     "./configs/base",
     "./configs/typescript",
     "./configs/rxjs",
-    "./configs/angular-a11y",
-    "./configs/angular-best-practices",
+    "./configs/ngrx",
     "./configs/jest",
     "./configs/karma",
-    "./configs/ngrx",
+    "./configs/angular-a11y",
+    "./configs/angular-best-practices",
   ].map(require.resolve),
 };

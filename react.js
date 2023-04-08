@@ -10,9 +10,9 @@ module.exports = {
   extends: [
     "./configs/base",
     "./configs/typescript-strict",
-    "./configs/react-best-practices",
     "./configs/jest",
-    "./configs/jsx",
+    "./configs/import",
+    "./configs/react-best-practices",
   ].map(require.resolve),
 
   rules: {

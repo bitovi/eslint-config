@@ -7,6 +7,8 @@ module.exports = {
   extends: ["plugin:import/recommended", "plugin:import/typescript"],
 
   rules: {
+    "import/no-unresolved": "off",
+
     "@typescript-eslint/consistent-type-imports": "error",
     "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
     "import/first": "error",
@@ -16,6 +18,11 @@ module.exports = {
     "import/order": [
       "error",
       {
+        "newlines-between": "always-and-inside-groups",
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true ,
+        },
         groups: [
           "type",
           "builtin",

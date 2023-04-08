@@ -1,6 +1,11 @@
 module.exports = {
-  plugins: ["react", "react-hooks"],
-  extends: ["plugin:react/recommended", "plugin:react-hooks/recommended"],
+  plugins: ["react", "react-hooks", "jsx-a11y"],
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+  ],
 
   rules: {
     "react/no-unknown-property": "off",
