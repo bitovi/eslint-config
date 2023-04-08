@@ -9,14 +9,4 @@ module.exports = {
     "./configs/karma",
     "./configs/ngrx",
   ].map(require.resolve),
-  rules: {
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        ignoreRestSiblings: true,
-        args: "after-used",
-      },
-    ],
-  },
 };
