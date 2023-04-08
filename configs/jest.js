@@ -6,10 +6,7 @@ const angular = tryRequire("@angular/core");
 module.exports = !jest
   ? {}
   : {
-      plugins: [
-        "jest",
-        "testing-library",
-      ],
+      plugins: ["jest", "testing-library"],
       extends: [
         "plugin:jest/recommended",
         ...(!react ? [] : ["plugin:testing-library/react"]),
