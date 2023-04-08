@@ -1,0 +1,73 @@
+name: Verify and Publish
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      segment:
+        description: "The version segment to increment: major, minor, or patch."
+        required: true
+      preId:
+        description: "Appended to the pre-release segment. (default: \"\")"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test Angular
+        run: npm run test:angular
+      - name: Test React
+        run: npm run test:react
+
+  publish:
+    if: github.event_name == 'workflow_dispatch'
+    needs: verify
+
+    concurrency:
+      group: "npm publish"
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      packages: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Increment Version
+        run: |
+          git config --local user.email "Action: ${{ github.workflow }} - ${{ github.job }}"
+          git config --local user.name "${{ github.job }}@${{ github.workflow }"
+
+          if [[ ${{ github.event.inputs.segment }} == pre* ]]; then
+            PRE_ID="${{ github.event.inputs.preId}}"
+            if [[ -n "$PRE_ID" ]]; then
+              PRE_ID_COMMAND_STR="--preid $PRE_ID"
+            fi
+          fi
+
+          npm version ${{ github.event.inputs.segment }} $PRE_ID_COMMAND_STR -m "Publish v%s"
+
+      - name: Publish to NPM Registry
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push Tag
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
