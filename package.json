@@ -2,20 +2,24 @@
   "name": "@bitovi/eslint-config",
   "version": "1.4.1",
   "description": "Bitovi's recommended set of ESLint rules",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitovi/eslint-config.git"
-  },
+  "homepage": "https://github.com/bitovi/eslint-config#readme",
+  "license": "MIT",
   "author": {
     "name": "Bitovi",
     "email": "contact@bitovi.com",
     "web": "https://www.bitovi.com/"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitovi/eslint-config.git"
+  },
   "bugs": {
     "url": "https://github.com/bitovi/eslint-config/issues"
   },
-  "homepage": "https://github.com/bitovi/eslint-config#readme",
+  "exports": {
+    "./angular": "./angular.js",
+    "./react": "./react.js"
+  },
   "scripts": {
     "prettier": "prettier --check lib configs *.js *.mjs",
     "test:angular": "node angular.test.mjs",

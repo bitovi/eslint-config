@@ -12,7 +12,7 @@ module.exports = {
       "error",
       {
         ignoreRestSiblings: true,
-        args: "after-used",
+        args: "none",
       },
     ],
   },
