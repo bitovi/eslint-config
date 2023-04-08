@@ -1,10 +1,5 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
 
   plugins: ["react", "react-hooks"],
   extends: [
@@ -12,16 +7,20 @@ module.exports = {
     "plugin:react-hooks/recommended",
 
     ...[
-      "./rules/base",
-      "./rules/typescript",
-      "./rules/jest",
-      "./rules/jsx",
+      "./configs/base",
+      "./configs/typescript",
+      "./configs/jest",
+      "./configs/jsx",
     ].map(require.resolve),
   ],
 
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+
   rules: {
-    "react/display-name": "off",
-    "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "error",
     "react-hooks/rules-of-hooks": "error",
 
@@ -46,6 +45,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
 
     "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
 
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -58,9 +58,8 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.stories.*", "**/*.test.*"],
+      files: ["**/*.stories.*", "**/*.test.*", "**/*.spec.*"],
       rules: {
-        "import/no-anonymous-default-export": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
       },
     },
