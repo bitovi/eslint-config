@@ -4,32 +4,49 @@ Bitovi's Recommended ESLint Rule Set
 
 ## Installation
 
-Run `npm install --save-dev @bitovi/eslint-config` or `npm i -D @bitovi/eslint-config`
+Run `npm install --save-dev @bitovi/eslint-config`
 
 ## Usage
 
-In your Project's ESLint config file, extend any of the available rules.
+This package ships with several primary configs, containing our full reccomendations for that stack. You will usually want to use one of these directly.
+
+* angular
+* react
+
+In your Project's ESLint config file, extend one of them.
 
 ```
   extends: [
-    '@bitovi/eslint-config/angular', // includes all angular recommended rules, see Available Rules below
-    '@bitovi/eslint-config/rules/rxjs', // for specific rule usage, in this example the rxjs rules
+    "@bitovi/eslint-config/angular",
   ]
 ```
 
-## Available Rules
+## Advanced Usage
 
-| Rule                   | angular            | react              |
+If you only want a portion of our config or want more fine-grained control, you can access each of our smaller configs direction. In your Project's ESLint config file, extend any of the available configs.
+
+```
+  extends: [
+    "@bitovi/eslint-config/configs/rxjs",
+    "@bitovi/eslint-config/configs/jest",
+  ]
+```
+
+## Available Configs
+
+| Config                 | angular            | react              |
 | ---------------------- | ------------------ | ------------------ |
 | angular-a11y           | :white_check_mark: |                    |
 | angular-best-practices | :white_check_mark: |                    |
 | base                   | :white_check_mark: | :white_check_mark: |
+| import                 |                    | :white_check_mark: |
 | jest                   | :white_check_mark: | :white_check_mark: |
-| jsx                    |                    | :white_check_mark: |
 | karma                  | :white_check_mark: |                    |
 | ngrx                   | :white_check_mark: |                    |
+| react-best-practices   |                    | :white_check_mark: |
 | rxjs                   | :white_check_mark: |                    |
 | typescript             | :white_check_mark: | :white_check_mark: |
+| typescript-strict      |                    | :white_check_mark: |
 
 ### angular-a11y
 
@@ -65,25 +82,22 @@ In your Project's ESLint config file, extend any of the available rules.
 
 ### base
 
-base rule includes `eslint:recommended`
+base config includes `eslint:recommended`
 
 ### jest
 
-jest rule includes `jest/recommended` and, depending if you are using angular or react, `testing-library/angular` or `testing-library/react`.
+jest config includes `jest/recommended` and, depending if you are using angular or react, `testing-library/angular` or `testing-library/react`.
 
 | Rule              | Error Level |
 | ----------------- | ----------- |
 | jest/no-export    | off         |
 | jest/valid-expect | off         |
 
-### karma
-
-to-do
 
 ### ngrx
 
-ngrx rule includes `ngrx/recommended` if @ngrx/store or @ngrx/component-store version is less than 14.
-Otherwise, ngrx rule includes `@ngrx/recommended`.
+ngrx config includes `ngrx/recommended` if @ngrx/store or @ngrx/component-store version is less than 14.
+Otherwise, ngrx config includes `@ngrx/recommended`.
 
 ### rxjs
 

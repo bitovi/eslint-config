@@ -1,22 +1,12 @@
 module.exports = {
   extends: [
-    "./rules/base",
-    "./rules/typescript",
-    "./rules/rxjs",
-    "./rules/angular-a11y",
-    "./rules/angular-best-practices",
-    "./rules/jest",
-    "./rules/karma",
-    "./rules/ngrx",
+    "./configs/base",
+    "./configs/typescript",
+    "./configs/rxjs",
+    "./configs/ngrx",
+    "./configs/jest",
+    "./configs/karma",
+    "./configs/angular-a11y",
+    "./configs/angular-best-practices",
   ].map(require.resolve),
-  rules: {
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        ignoreRestSiblings: true,
-        args: "after-used",
-      },
-    ],
-  },
 };

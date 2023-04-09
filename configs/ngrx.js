@@ -4,9 +4,8 @@ const ngrxComponentStore = tryRequire("@ngrx/component-store/package.json");
 const ngrx = ngrxStore || ngrxComponentStore;
 
 const getPackageMajorVersion = (package) => {
-  if (!package) {
-    return;
-  }
+  if (!package) return;
+
   return parseInt(package.version.split(".")[0]);
 };
 
@@ -28,6 +27,7 @@ module.exports = !ngrx
           ],
         };
       }
+
       return {
         overrides: [
           {
