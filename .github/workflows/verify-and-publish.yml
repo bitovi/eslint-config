@@ -52,7 +52,7 @@ jobs:
       - name: Increment Version
         run: |
           git config --local user.email "Action: ${{ github.workflow }} - ${{ github.job }}"
-          git config --local user.name "${{ github.job }}@${{ github.workflow }"
+          git config --local user.name "${{ github.job }}@${{ github.workflow }}"
 
           if [[ ${{ github.event.inputs.segment }} == pre* ]]; then
             PRE_ID="${{ github.event.inputs.preId}}"
