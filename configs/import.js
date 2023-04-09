@@ -20,8 +20,8 @@ module.exports = {
       {
         "newlines-between": "always-and-inside-groups",
         alphabetize: {
-          order: 'asc',
-          caseInsensitive: true ,
+          order: "asc",
+          caseInsensitive: true,
         },
         groups: [
           "type",
