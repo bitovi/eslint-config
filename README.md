@@ -106,3 +106,9 @@ rxjs includes `rxjs/recommended`.
 ### typescript
 
 typescript includes `@typescript-eslint/eslint-recommended` and `@typescript-eslint/recommended`.
+
+## Connect With US
+
+Come chat with us or ask questions in our Bitovi community [Discord](https://discord.gg/J7ejFsZnJ4).
+
+See what we're up to by following us on [Twitter](https://twitter.com/bitovi).
