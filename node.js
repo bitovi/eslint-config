@@ -1,12 +1,6 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
 
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-
   extends: [
     "./configs/base",
     "./configs/typescript-strict",
