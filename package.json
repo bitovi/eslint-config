@@ -18,12 +18,14 @@
   },
   "exports": {
     "./angular": "./angular.js",
-    "./react": "./react.js"
+    "./react": "./react.js",
+    "./node": "./node.js"
   },
   "scripts": {
     "prettier": "prettier --check lib configs *.js *.mjs",
     "test:angular": "node angular.test.mjs",
-    "test:react": "node react.test.mjs"
+    "test:react": "node react.test.mjs",
+    "test:node": "node node.test.mjs"
   },
   "prettier": {
     "semi": true,
