@@ -8,7 +8,7 @@ on:
         description: "The version segment to increment: major, minor, or patch."
         required: true
       preId:
-        description: "Appended to the pre-release segment. (default: \"\")"
+        description: 'Appended to the pre-release segment. (default: "")'
 
 jobs:
   verify:
@@ -32,6 +32,8 @@ jobs:
         run: npm run test:angular
       - name: Test React
         run: npm run test:react
+      - name: Test Node
+        run: npm run test:node
 
   publish:
     if: github.event_name == 'workflow_dispatch'
