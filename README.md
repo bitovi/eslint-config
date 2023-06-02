@@ -8,10 +8,11 @@ Run `npm install --save-dev @bitovi/eslint-config`
 
 ## Usage
 
-This package ships with several primary configs, containing our full reccomendations for that stack. You will usually want to use one of these directly.
+This package ships with several primary configs, containing our full recommendations for that stack. You will usually want to use one of these directly.
 
 * angular
 * react
+* node
 
 In your Project's ESLint config file, extend one of them.
 
