@@ -22,6 +22,5 @@ module.exports = !jest
         "jest/prefer-hooks-in-order": "error",
         "jest/prefer-hooks-on-top": "error",
         "testing-library/prefer-user-event": "error",
-        "testing-library/prefer-wait-for": "error",
       },
     };
