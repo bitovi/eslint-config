@@ -1,6 +1,6 @@
 {
   "name": "@bitovi/eslint-config",
-  "version": "1.8.0-0",
+  "version": "1.8.0",
   "description": "Bitovi's recommended set of ESLint rules",
   "homepage": "https://github.com/bitovi/eslint-config#readme",
   "license": "MIT",
